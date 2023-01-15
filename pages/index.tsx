@@ -4,6 +4,17 @@ import Head from 'next/head';
 
 import styles from '../styles/Home.module.scss';
 
+const date = new Date();
+
+const getYears = () => {
+	const month = date.getMonth();
+
+	console.log(month);
+	if(month < 3 && month !== 2 && ) {
+
+	}
+};
+
 const Home: NextPage = () => {
 	return (
 		<div className={styles.container}>
@@ -20,7 +31,7 @@ const Home: NextPage = () => {
 					<div className={styles.wrapper}>
 						<div className={styles.image}>
 							<div className={styles.backgroundColor}>
-								<img src={'https://github.com/jvopinho.png'} />
+								<img src={'https://github.com/jvopinho.png'} alt={'@jvopinho avatar'} />
 							</div>
 						</div>
 						<br />
@@ -28,7 +39,6 @@ const Home: NextPage = () => {
 							<span className={`${styles.codeblock} ${styles.name}`}>jvopinho</span>
 
 							<div className={styles.name} style={{
-								backgroundColor: 'black', 
 								width: '95%',
 								height: '1px',
 								marginTop: '10px',
