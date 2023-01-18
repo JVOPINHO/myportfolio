@@ -1,0 +1,96 @@
+@import '../../styles/theme.scss';
+
+.wrapper {
+    width: 75vw;
+    height: fit-content;
+    margin: 40px auto 40px auto;
+    padding: 12px;
+    border-radius: 6px / 6px;
+    display: flex;
+
+    .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        
+        .backgroundColor {
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(45deg, transparent, $pinhoColorMain, transparent);
+            border-radius: 2rem;
+            margin-right: 25px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 2rem;
+                transform: rotate(15deg);
+                transition-duration: 0.5s;
+                transition-property: transform;
+
+                &:hover {
+                    transform: rotate(0deg);
+                    transition-duration: 0.5s;
+                    transition-property: transform;
+                }
+            }
+        }
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: fill-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 20px;
+
+            .card {
+                background: $pinhoColorSecondary;
+                border: 1.5px solid transparent;
+                color: $pinhoColorBg;
+                border: 1px solid transparent;
+                border-radius: 1rem;
+                padding: 1.3rem;
+                text-align: center;
+                transition: $transition;
+                font-weight: 500;
+
+                &.invertColor {
+                    color: $pinhoColorSecondary;
+                    background-color: $pinhoColorBg;
+                    border-color: $pinhoColorSecondary;
+                }
+            }
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 500;
+            color: $pinhoColorLight;
+        }
+    }
+
+    @media screen and (max-width: 840px) {
+		& {
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+            display: block;
+
+            .image {
+                margin-left: auto;
+                margin-right: auto;
+            }
+		}
+	} 
+}

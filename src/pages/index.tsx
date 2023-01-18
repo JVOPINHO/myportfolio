@@ -2,18 +2,9 @@ import type { NextPage } from 'next';
 import type { ReactNode } from 'react';
 import Head from 'next/head';
 
+import { Intro } from '../components/Intro/Intro';
+
 import styles from '../styles/Home.module.scss';
-
-const date = new Date();
-
-const getYears = () => {
-	const month = date.getMonth();
-
-	console.log(month);
-	if(month < 3 && month !== 2 && ) {
-
-	}
-};
 
 const Home: NextPage = () => {
 	return (
@@ -25,39 +16,7 @@ const Home: NextPage = () => {
 			</Head>
 
 			<main>
-				<div className={styles.card}>
-					<span className={`${styles.codeblock} ${styles.name}`}>jvopinho</span>
-					<br />
-					<div className={styles.wrapper}>
-						<div className={styles.image}>
-							<div className={styles.backgroundColor}>
-								<img src={'https://github.com/jvopinho.png'} alt={'@jvopinho avatar'} />
-							</div>
-						</div>
-						<br />
-						<section>
-							<span className={`${styles.codeblock} ${styles.name}`}>jvopinho</span>
-
-							<div className={styles.name} style={{
-								width: '95%',
-								height: '1px',
-								marginTop: '10px',
-								marginBottom: '10px',
-							}} />
-
-							<span className={styles.codeblock}>
-								My Real Name is John Pinho our João Pinho, but I like to be called Pinho,
-								<br />
-								But my online-alias is Bae our jvopinho,
-								<br />
-								I am {new Date().getFullYear() - 2005} years old, I was born and I live in <a href={'https://en.wikipedia.org/wiki/Brazil'}>Brazil</a>, in the state of <a href={'https://en.wikipedia.org/wiki/S%C3%A3o_Paulo'}>São Paulo.</a>
-								<br />
-								<br />
-								I entered the programming world in 2019 with my school&apos;s robotics group.
-							</span>
-						</section>
-					</div>
-				</div>
+				<Intro />
 			</main>
 		</div>
 	);
