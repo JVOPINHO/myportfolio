@@ -59,7 +59,7 @@
                 border: 1.5px solid transparent;
                 color: $pinhoColorBg;
                 border: 1px solid transparent;
-                border-radius: 1rem;
+                border-radius: 0.6rem;
                 padding: 1.3rem;
                 text-align: center;
                 transition: $transition;
@@ -69,6 +69,12 @@
                     color: $pinhoColorSecondary;
                     background-color: $pinhoColorBg;
                     border-color: $pinhoColorSecondary;
+                }
+
+                &:hover {
+                    background: $pinhoColorWhite;
+                    border-color: transparent;
+                    color: $pinhoColorBg;
                 }
             }
         }

@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import type { ReactNode } from 'react';
 import Head from 'next/head';
 
-import { Intro } from '../components/Intro/Intro';
+import { Intro } from '../components/Intro';
 
 import styles from '../styles/Home.module.scss';
 

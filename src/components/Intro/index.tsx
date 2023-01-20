@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Intro.module.scss';
+import styles from './styles.module.scss';
 
 const date = new Date();
 
@@ -13,7 +13,7 @@ const getYears = () => {
 };
 
 export const Intro: React.FC = () => (
-    <section className={styles.wrapper}>
+	<section className={styles.wrapper}>
 		<div className={styles.wrapper}>
 			<div className={styles.image}>
 				<div className={styles.backgroundColor}>
@@ -22,7 +22,7 @@ export const Intro: React.FC = () => (
 			</div>
 			<br />
 			<section>
-                <div className={styles.cards}>
+				<div className={styles.cards}>
 					<a href={'/cv'}>
 						<div className={`${styles.card} ${styles.invertColor}`}>
 							Download CV
@@ -33,7 +33,7 @@ export const Intro: React.FC = () => (
 						Github
 						</div>
 					</a>
-                </div>
+				</div>
 
 				<p>
 					My Real Name is João Pinho, but I like to be called Pinho,
@@ -43,9 +43,9 @@ export const Intro: React.FC = () => (
 					I am {getYears()} years old, I was born and I live in Brazil, in the state of São Paulo.
 					<br />
 					<br />
-					I entered the programming world in 2019 with my school&apos;s robotics group.
+					I entered the programming world in 2019 with my school&apos;s robotics group, and in 2020 I changed my area of work to backend and bots for discord.
 				</p>
 			</section>
 		</div>
-    </section>
+	</section>
 );
