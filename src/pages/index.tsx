@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import Head from 'next/head';
 
 import { Intro } from '../components/Intro';
+import { Header } from '../components/Header';
 
 import styles from '../styles/Home.module.scss';
 
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
 			</Head>
 
 			<main>
+				<Header />
 				<Intro />
 			</main>
 		</div>

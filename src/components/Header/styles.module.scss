@@ -1,0 +1,23 @@
+@import '../../styles/theme.scss';
+
+.wrapper {
+    text-align: center;
+    height: 100%;
+    position: relative;
+    padding: 4rem;
+
+    .header {
+        text-align: center;
+        height: 100%;
+        position: relative;
+
+        h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4rem $pinhoColorMain;
+        }
+
+        h5 {
+            color: $pinhoColorSecondary;
+        }
+    }
+}
