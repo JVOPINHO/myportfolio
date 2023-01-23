@@ -100,3 +100,24 @@
 		}
 	} 
 }
+
+#scrollDown {
+    width: 24px;
+	height: 24px;
+    animation: Ghost 1s linear infinite;
+	position: absolute;
+    left: calc(50% - 12px);
+	bottom: 12px;
+
+    fill: $pinhoColorMain;
+}
+
+@keyframes Ghost {
+    from {
+        bottom: 12px;
+    }
+
+    to {
+        bottom: 8px;
+    }
+}

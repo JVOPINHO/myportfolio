@@ -1,5 +1,9 @@
 import React from 'react';
+import Image from 'next/image';
+
 import styles from './styles.module.scss';
+
+import Arrow from '../../../public/arrow.svg';
 
 const date = new Date();
 
@@ -17,7 +21,7 @@ export const Intro: React.FC = () => (
 		<div className={styles.wrapper}>
 			<div className={styles.image}>
 				<div className={styles.backgroundColor}>
-					<img src={'https://github.com/jvopinho.png'} alt={'@jvopinho avatar'} />
+					<img src={'/me.png'} alt={'@jvopinho avatar'} />
 				</div>
 			</div>
 			<br />
@@ -30,7 +34,7 @@ export const Intro: React.FC = () => (
 					</a>
 					<a href={'https://github.com/jvopinho'}>
 						<div className={styles.card}>
-						Github
+							Github
 						</div>
 					</a>
 				</div>
@@ -43,9 +47,13 @@ export const Intro: React.FC = () => (
 					I am {getYears()} years old, I was born and I live in Brazil, in the state of São Paulo.
 					<br />
 					<br />
-					I entered the programming world in 2019 with my school&apos;s robotics group, and in 2020 I changed my area of work to backend and bots for discord.
+					I entered the programming world in 2019 with my school&apos;s robotics group, and in 2020 I changed my area of work to backend and discord bots.
 				</p>
 			</section>
+
+			<div id={styles.scrollDown}>
+				<Image src={Arrow} alt="v" />
+			</div>
 		</div>
 	</section>
 );

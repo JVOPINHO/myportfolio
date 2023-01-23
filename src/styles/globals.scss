@@ -23,10 +23,10 @@ body {
 }
 
 a {
-    color: inherit;
+    color: $pinhoColorOrange;
     text-decoration: none;
 
     &:hover {
-        color: #000000a2
+        color: lighten($pinhoColorOrange, 50);
     }
 }

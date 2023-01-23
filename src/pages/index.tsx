@@ -4,6 +4,7 @@ import Head from 'next/head';
 
 import { Intro } from '../components/Intro';
 import { Header } from '../components/Header';
+import { Timeline, TimelineEvent } from '../components/Timeline';
 
 import styles from '../styles/Home.module.scss';
 
@@ -19,6 +20,18 @@ const Home: NextPage = () => {
 			<main>
 				<Header />
 				<Intro />
+
+				<Timeline>
+					<TimelineEvent>
+						Test
+					</TimelineEvent>
+					<TimelineEvent>
+						Test2
+					</TimelineEvent>
+					<TimelineEvent>
+						Test3
+					</TimelineEvent>
+				</Timeline>
 			</main>
 		</div>
 	);
