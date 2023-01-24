@@ -11,6 +11,6 @@ const skills = [
 
 export const Skills: React.FC = () => (
 	<div className={styles.skills} style={{gridTemplateColumns: `repeat(${skills.length <= 10 ? 10 : skills.length}, 1fr)`}}>
-		{skills.map(skill => (<img key={skill.name} src={skill.image} />))}
+		{skills.map(skill => (<img key={skill.name} src={skill.image} alt={skill.name} />))}
 	</div>
 );
