@@ -1,12 +1,35 @@
 import type { NextPage } from 'next';
 import type { ReactNode } from 'react';
 import Head from 'next/head';
+import ReactMarkdown from 'react-markdown';
+import RemarkGFM from 'remark-gfm';
+import styled from 'styled-components';
 
 import { Intro } from '../components/Intro';
 import { Header } from '../components/Header';
 import { Timeline, TimelineEvent } from '../components/Timeline';
+import { Skills } from '../components/Skills';
 
 import styles from '../styles/Home.module.scss';
+import { timeline } from '../config';
+
+const Section = styled.section`
+	width: 75vw;
+	height: fit-content;
+	margin: 20px auto 40px auto;
+	padding: 12px;
+	border-radius: 6px / 6px;
+	
+	h2 {
+		height: 100%;
+		text-align: center;
+		margin-bottom: 10px;
+
+		strong {
+			color: #FC9D03;
+		}
+	}
+`;
 
 const Home: NextPage = () => {
 	return (
@@ -18,20 +41,28 @@ const Home: NextPage = () => {
 			</Head>
 
 			<main>
-				<Header />
-				<Intro />
+				<Section style={{display: 'block'}} id={'intro'}>
+					<Header />
+					<Intro />
+				</Section>
 
-				<Timeline>
-					<TimelineEvent>
-						Test
-					</TimelineEvent>
-					<TimelineEvent>
-						Test2
-					</TimelineEvent>
-					<TimelineEvent>
-						Test3
-					</TimelineEvent>
-				</Timeline>
+				<Section id={'skills'}>
+					<h2><strong>#</strong> Skills</h2>
+					<Skills />
+				</Section>
+
+				<Section id={'timeline'}>
+					<h2><strong>#</strong> Timeline</h2>
+					<Timeline>
+						{timeline.map((line, index) => (
+							<TimelineEvent title={line.title} key={`line-${index}`}>
+								<ReactMarkdown remarkPlugins={[RemarkGFM]}>
+									{line.content}
+								</ReactMarkdown>
+							</TimelineEvent>
+						))}
+					</Timeline>
+				</Section>
 			</main>
 		</div>
 	);

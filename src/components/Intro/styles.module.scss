@@ -39,6 +39,37 @@
         }
     }
 
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 20px;
+
+        .card {
+            background: $pinhoColorMain;
+            border: 1.5px solid transparent;
+            color: $pinhoColorBg;
+            border: 1px solid transparent;
+            border-radius: 0.6rem;
+            padding: 1.3rem;
+            text-align: center;
+            transition: $transition;
+            font-weight: 500;
+
+            &.invertColor {
+                color: $pinhoColorMain;
+                background-color: $pinhoColorBg;
+                border-color: $pinhoColorMain;
+            }
+
+            &:hover {
+                background: $pinhoColorWhite;
+                border-color: transparent;
+                color: $pinhoColorBg;
+            }
+        }
+    }
+
     section {
         display: flex;
         flex-direction: column;
@@ -47,37 +78,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            margin-bottom: 20px;
-
-            .card {
-                background: $pinhoColorSecondary;
-                border: 1.5px solid transparent;
-                color: $pinhoColorBg;
-                border: 1px solid transparent;
-                border-radius: 0.6rem;
-                padding: 1.3rem;
-                text-align: center;
-                transition: $transition;
-                font-weight: 500;
-
-                &.invertColor {
-                    color: $pinhoColorSecondary;
-                    background-color: $pinhoColorBg;
-                    border-color: $pinhoColorSecondary;
-                }
-
-                &:hover {
-                    background: $pinhoColorWhite;
-                    border-color: transparent;
-                    color: $pinhoColorBg;
-                }
-            }
-        }
 
         p {
             font-size: 18px;
@@ -109,7 +109,7 @@
     left: calc(50% - 12px);
 	bottom: 12px;
 
-    fill: $pinhoColorMain;
+    fill: $pinhoColorSecondary;
 }
 
 @keyframes Ghost {
