@@ -30,3 +30,17 @@ a {
         color: lighten($pinhoColorOrange, 50);
     }
 }
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+        
+::-webkit-scrollbar-track {
+    background: #333;
+    box-shadow: inset 0 0 6px rgba(59, 59, 59, 0.489);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $pinhoColorLight;
+    border-radius: 0.5em;
+}

@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import type { ReactNode } from 'react';
+import type { PropsWithChildren, HTMLAttributes, DetailedHTMLProps } from 'react';
 import Head from 'next/head';
 import ReactMarkdown from 'react-markdown';
 import RemarkGFM from 'remark-gfm';
@@ -13,23 +13,7 @@ import { Skills } from '../components/Skills';
 import styles from '../styles/Home.module.scss';
 import { timeline } from '../config';
 
-const Section = styled.section`
-	width: 75vw;
-	height: fit-content;
-	margin: 20px auto 40px auto;
-	padding: 12px;
-	border-radius: 6px / 6px;
-	
-	h2 {
-		height: 100%;
-		text-align: center;
-		margin-bottom: 10px;
-
-		strong {
-			color: #FC9D03;
-		}
-	}
-`;
+const Section: React.FC<PropsWithChildren<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>>> = props => <section {...props} className={`${styles.section} ${props?.className || ''}`.trim()} />;
 
 const Home: NextPage = () => {
 	return (
