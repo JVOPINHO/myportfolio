@@ -21,7 +21,7 @@ export const Intro: React.FC = () => (
 		<div className={styles.wrapper}>
 			<div className={styles.image}>
 				<div className={styles.backgroundColor}>
-					<img src={'/me.jpg'} alt={'@jvopinho avatar'} />
+					<img src={'/me.png'} alt={'@jvopinho avatar'} />
 				</div>
 			</div>
 			<br />
