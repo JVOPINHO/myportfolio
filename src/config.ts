@@ -11,6 +11,18 @@ export const timeline = [
 		title: '2021',
 		content: 'In August 2021, content creator [Rafaella Ballerini](https://www.youtube.com/@rafaellaballerini), who talks about programming, opened vacancies for her [discord community](https://discord.gg/wagxzStdcR) team and **I applied to develop bots and systems**, internally called R2D2, and was accepted into the team'
 	},
+	{
+		title: '2022',
+		content: 'As a hobby, I started creating games using Roblox to test mechanics and have fun, at that time I acquired knowledge of lua and luau\nI was also promoted to R2D2 Development Leader of the "Ballerini Community"'
+	},
+	{
+		title: '2023 - College',
+		content: 'After finishing high school, I started the **Software Engineering** course at Universidade Estácio'
+	},
+	{
+		title: '2024',
+		content: 'I started at a startup, [Sales Affiliate](https://salesaffiliate.com.br), and was assigned to the Back-end sector, where I played roles creating APIs, automation systems and chat bots for WhatsApp'
+	}
 ];
 
 export const skills = [
