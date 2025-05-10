@@ -5,10 +5,10 @@ import ReactMarkdown from 'react-markdown';
 import RemarkGFM from 'remark-gfm';
 import styled from 'styled-components';
 
-import { Intro } from '../components/Intro';
-import { Header } from '../components/Header';
-import { Timeline, TimelineEvent } from '../components/Timeline';
-import { Skills } from '../components/Skills';
+import { Intro } from '../../components/Intro';
+import { Header } from '../../components/Header';
+import { Timeline, TimelineEvent } from '../../components/Timeline';
+import { Skills } from '../../components/Skills';
 
 import styles from '../styles/Home.module.scss';
 import { timeline } from '../config';

@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './styles.module.scss';
 
-import { skills as _skills } from '../../config';
+import { skills as _skills } from '../../src/config';
 
 const skills = [
 	..._skills.filter(skill => skill.favorite),
